@@ -21,7 +21,6 @@ public class AgenciaController {
         return agenciaService.cadastroAgencia(agencia);
     }
 
-
     //METODO PARA LISTAR TODAS AS AGENCIAS CADASTRADAS E SUAS POSIÇÕES.
     @GetMapping
     public List<Agencia> listar() {
@@ -39,6 +38,4 @@ public class AgenciaController {
     public String deletarAgencia(@PathVariable("id") Long id){
          return agenciaService.deletarAgencia(id);
     }
-
-
 }
