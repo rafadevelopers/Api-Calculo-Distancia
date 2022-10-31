@@ -1,12 +1,7 @@
-package com.api.desafiosantander;
+package com.api.desafiosantander.service;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DesafioSantanderApplicationTests {
-
-
-
-
-
+public class DeletAgencyServiceTest {
 }

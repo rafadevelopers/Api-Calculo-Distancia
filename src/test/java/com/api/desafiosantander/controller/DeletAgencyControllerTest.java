@@ -1,20 +1,19 @@
 package com.api.desafiosantander.controller;
 
-import com.api.desafiosantander.model.Agencia;
-import com.api.desafiosantander.service.AgenciaService;
+import com.api.desafiosantander.service.AgencyService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class DeletarAgenciaControllerTest {
+public class DeletAgencyControllerTest {
 
     @Autowired
-    AgenciaService agenciaService;
+    AgencyService agencyService;
 
     @Test
     public void initDeletarAgencia(){
-        agenciaService.deletarAgencia(1L);
+        agencyService.deletAgency(1L);
     }
 
 }

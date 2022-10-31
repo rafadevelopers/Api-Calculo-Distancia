@@ -6,19 +6,19 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 @Data
-public class AgenciaDistanciaVO {
+public class AgencyDistanceVo {
 
     private String agencia;
-    private double distancia;
+    private Double distancia;
 
 
-    public AgenciaDistanciaVO(@NotNull Agencia agencia, double agParamX, double agParamY) {
+    public AgencyDistanceVo(@NotNull Agency agency, double agParamX, double agParamY) {
 
         double sum = 0;
 
         double agPosX, agPosY;
-        agPosX = agencia.getPosX(); // PEGA O VALOR DA POSIÇÃO X e Y DA AGENCIA CADASTRADA.
-        agPosY = agencia.getPosY();
+        agPosX = agency.getPosX(); // PEGA O VALOR DA POSIÇÃO X e Y DA AGENCIA CADASTRADA.
+        agPosY = agency.getPosY();
 
         double pos1, pos2;
 
@@ -26,7 +26,7 @@ public class AgenciaDistanciaVO {
         pos2 = Math.pow(agParamY - agPosY, 2);
 
         sum = Math.sqrt(pos1 + pos2);
-        this.agencia = agencia.getNome();
+        this.agencia = agency.getNome();
 
         NumberFormat formatter = new DecimalFormat("#00");
 

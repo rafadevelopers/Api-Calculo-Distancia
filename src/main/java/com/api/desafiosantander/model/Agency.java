@@ -2,19 +2,19 @@ package com.api.desafiosantander.model;
 import javax.persistence.*;
 
 @Entity
-public class Agencia {
+public class Agency {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private long id;
+    private Long id;
     @Column(nullable = false)
     private String nome;
     @Column(nullable = false)
-    private double posX;
+    private Double posX;
     @Column(nullable = false)
-    private double posY;
+    private Double posY;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -30,22 +30,22 @@ public class Agencia {
         this.nome = nome;
     }
 
-    public double getPosX() {
+    public Double getPosX() {
         return posX;
     }
 
-    public void setPosX(double posX) {
+    public void setPosX(Double posX) {
         this.posX = posX;
     }
 
-    public double getPosY() {
+    public Double getPosY() {
         return posY;
     }
 
-    public void setPosY(double posY) {
+    public void setPosY(Double posY) {
         this.posY = posY;
     }
 
-    public Agencia(){
+    public Agency(){
     }
 }
