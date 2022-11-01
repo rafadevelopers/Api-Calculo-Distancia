@@ -17,7 +17,7 @@ public class AgencyDistanceVo {
         double sum = 0;
 
         double agPosX, agPosY;
-        agPosX = agency.getPosX(); // PEGA O VALOR DA POSIÇÃO X e Y DA AGENCIA CADASTRADA.
+        agPosX = agency.getPosX(); // PEGA O VALOR DA POSIï¿½ï¿½O X e Y DA AGENCIA CADASTRADA.
         agPosY = agency.getPosY();
 
         double pos1, pos2;
@@ -32,7 +32,6 @@ public class AgencyDistanceVo {
 
         this.distancia = Double.parseDouble(formatter.format(sum));
     }
-
     //FONTE DA FORMULA PARA REALIZAR O CALCULO
     //https://mundoeducacao.uol.com.br/matematica/distancia-entre-dois-pontos.htm
     //https://brasilescola.uol.com.br/matematica/distancia-entre-dois-pontos.htm

@@ -1,6 +1,7 @@
 package com.api.desafiosantander.controller;
 import com.api.desafiosantander.model.AgencyDistanceVo;
 import com.api.desafiosantander.model.Agency;
+import com.api.desafiosantander.model.Dto.AgencyDto;
 import com.api.desafiosantander.service.AgencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,7 +24,7 @@ public class AgencyController {
 
     //METODO PARA ALTERAR AGENCIA PELO ID.
     @PutMapping(value = "/alterar/{id}")
-    public Agency updateAgencyById(@RequestBody Agency agency, @PathVariable("id") Long id){
+    public AgencyDto updateAgencyById(@RequestBody Agency agency, @PathVariable("id") Long id){
         return agencyService.updateAgencyById(agency, id);
     }
 
@@ -36,7 +37,7 @@ public class AgencyController {
 
     //METODO PARA BUSCAR UMA AGENCIA PELO ID.
     @GetMapping("/buscar/{id}")
-    public Agency findAgencyById(@PathVariable("id") Long id){
+    public AgencyDto findAgencyById(@PathVariable("id") Long id){
         return agencyService.findAgencyById(id);
     }
 

@@ -2,10 +2,14 @@ package com.api.desafiosantander.service;
 
 import com.api.desafiosantander.model.Agency;
 import com.api.desafiosantander.model.AgencyDistanceVo;
+import com.api.desafiosantander.model.Dto.AgencyDto;
 import com.api.desafiosantander.repository.AgencyRepository;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -33,7 +37,7 @@ public class AgencyService {
     }
 
     //METODO QUE CONTEM A LOGICA PARA ALTERAR A AGENCIA
-    public Agency updateAgencyById(Agency agency, Long id) {
+    public AgencyDto updateAgencyById(Agency agency, Long id) {
         Optional<Agency> ag = agencyRepository.findById(id);
         if (ag.isPresent()) {
             Agency obj = ag.get();
@@ -49,7 +53,7 @@ public class AgencyService {
                 obj.setPosY(agency.getPosY());
             }
             agencyRepository.save(obj);
-            return obj;
+            return convertToDto(obj);
         }
         return null;
 
@@ -61,10 +65,10 @@ public class AgencyService {
         return "Agencia deletada com sucesso!";
     }
 
-    public Agency findAgencyById(Long id) {
+    public AgencyDto findAgencyById(Long id) {
         Optional<Agency> ag = agencyRepository.findById(id);
         if (ag.isPresent()) {
-            return ag.get();
+            return convertToDto(ag.get());
         }
         return null;
     }
@@ -97,6 +101,20 @@ public class AgencyService {
         return agenciasvo;
 
     }
+
+    private AgencyDto convertToDto(Agency agency){
+        AgencyDto dto = new AgencyDto();
+        dto.setId(agency.getId());
+        dto.setNome(agency.getNome());
+        dto.setPosX(agency.getPosX());
+        dto.setPosY(agency.getPosY());
+        return dto;
+
+    }
+
+
+
+
 
 
 }

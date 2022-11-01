@@ -14,6 +14,8 @@ public class Agency {
     @Column(nullable = false)
     private Double posY;
 
+
+
     public Long getId() {
         return id;
     }
@@ -48,4 +50,6 @@ public class Agency {
 
     public Agency(){
     }
+
+
 }

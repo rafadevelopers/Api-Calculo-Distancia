@@ -14,6 +14,6 @@ public class FindAllAgencyControllerTest {
 
     @Test
     public void initListarAgencia(){
-        agencyService.listarTodasAgencias();
+        agencyService.findAllAgency();
     }
 }
