@@ -1,4 +1,4 @@
-package com.api.desafiosantander.model;
+package com.api.desafiosantander.model.Entity;
 import javax.persistence.*;
 
 @Entity
@@ -13,6 +13,8 @@ public class Agency {
     private Double posX;
     @Column(nullable = false)
     private Double posY;
+
+    private boolean admin;
 
 
 

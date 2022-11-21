@@ -1,5 +1,5 @@
 package com.api.desafiosantander.controller;
-import com.api.desafiosantander.model.Agency;
+import com.api.desafiosantander.model.Entity.Agency;
 import com.api.desafiosantander.service.AgencyService;
 
 import org.junit.jupiter.api.Test;

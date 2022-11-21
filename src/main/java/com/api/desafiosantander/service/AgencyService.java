@@ -1,15 +1,14 @@
 package com.api.desafiosantander.service;
 
-import com.api.desafiosantander.model.Agency;
+import com.api.desafiosantander.model.Entity.Agency;
 import com.api.desafiosantander.model.AgencyDistanceVo;
 import com.api.desafiosantander.model.Dto.AgencyDto;
 import com.api.desafiosantander.repository.AgencyRepository;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;

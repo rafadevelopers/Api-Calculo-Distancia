@@ -1,6 +1,6 @@
 package com.api.desafiosantander.controller;
 import com.api.desafiosantander.model.AgencyDistanceVo;
-import com.api.desafiosantander.model.Agency;
+import com.api.desafiosantander.model.Entity.Agency;
 import com.api.desafiosantander.model.Dto.AgencyDto;
 import com.api.desafiosantander.service.AgencyService;
 import org.springframework.beans.factory.annotation.Autowired;

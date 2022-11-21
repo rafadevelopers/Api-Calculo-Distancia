@@ -1,6 +1,6 @@
 package com.api.desafiosantander.model.Dto;
 
-import com.api.desafiosantander.model.Agency;
+import com.api.desafiosantander.model.Entity.Agency;
 import lombok.Data;
 
 @Data

@@ -1,4 +1,5 @@
 package com.api.desafiosantander.model;
+import com.api.desafiosantander.model.Entity.Agency;
 import lombok.Data;
 import org.jetbrains.annotations.NotNull;
 
